@@ -1,6 +1,10 @@
-<?php include __DIR__ . "/../data/database.php"; ?>
+<?php 
+require __DIR__ . "/../data/database.php";
+require __DIR__ . "/../functions/filters.php";
+
+?>
 <div class="c-collection l-container">
-    <?php foreach($database as $album) { ?>
+    <?php foreach($databaseFilter3 as $album) { ?>
     <div class="c-album">
         <img src="<?= $album["poster"] ?>" :alt="<?= $album["title"] ?>" class="c-album__img">
         <h3 class="c-album__title"><?= $album["title"] ?></h3>

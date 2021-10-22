@@ -9,8 +9,8 @@
 </head>
 <body>
     <div id="app">
-        <?php include __DIR__ . "/partials/header.php"; ?>
-        <?php include __DIR__ . "/partials/collection.php"; ?>
+        <?php require __DIR__ . "/partials/header.php"; ?>
+        <?php require __DIR__ . "/partials/collection.php"; ?>
     </div>
 </body>
 </html>

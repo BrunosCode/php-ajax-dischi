@@ -41,7 +41,7 @@
     margin-right: auto;
 }
 .c-header__input {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 .c-header__label {
     color: var(--primary-text);
@@ -55,6 +55,11 @@
     grid-template-rows: auto auto;
     column-gap: 1rem;
     row-gap: 2rem;
+}
+@media screen and (max-width: 1200px) {
+    .c-collection {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .c-album {

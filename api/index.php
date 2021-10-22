@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . "/../data/database.php";
 
-header("Contet-Type: appliaction/json");
+header( "Contet-Type: appliaction/json" );
 
-echo json_encode($database);
+require __DIR__ . "/../functions/filters.php";
+
+echo json_encode($databaseFilter3);
