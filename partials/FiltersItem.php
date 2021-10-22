@@ -18,7 +18,7 @@
     <form>
         <label class="c-header__input">
             <span class="c-header__label">Filter Genres</span>
-            <select class="c-filter" name="genre" id="genre" placeholder>
+            <select class="c-header__filter" name="genre" id="genre" placeholder>
                 <option value="" selected>All</option>
                 <?php foreach($collectionGenres as $option) { ?>
                 <option value="<?= $option ?>"><?= $option ?></option>
@@ -27,7 +27,7 @@
         </label>
         <label class="c-header__input">
             <span class="c-header__label">Filter Authors</span>
-            <select class="c-filter" name="author" id="author" placeholder>
+            <select class="c-header__filter" name="author" id="author" placeholder>
                 <option value="" selected>All</option>
                 <?php foreach($collectionAuthors as $option) { ?>
                 <option value="<?= $option ?>"><?= $option ?></option>
@@ -36,13 +36,13 @@
         </label>
         <label class="c-header__input">
             <span class="c-header__label">Filter Years</span>
-            <select class="c-filter" name="year" id="year" placeholder>
+            <select class="c-header__filter" name="year" id="year" placeholder>
                 <option value="" selected>All</option>
                 <?php foreach($collectionYears as $option) { ?>
                 <option value="<?= $option ?>"><?= $option ?></option>
                 <?php } ?>        
             </select>
         </label>
-        <button type="submit">Filter</button>
+        <button class="c-header__btn" type="submit">Filter</button>
     </form>
 </div>

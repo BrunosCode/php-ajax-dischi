@@ -1,6 +1,6 @@
 <?php 
 require __DIR__ . "/../data/database.php";
-require __DIR__ . "/../functions/filters.php";
+require __DIR__ . "/../functions/databaseFilters.php";
 
 ?>
 <div class="c-collection l-container">

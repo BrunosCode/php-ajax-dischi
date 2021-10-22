@@ -13,17 +13,39 @@
     <div id="app">
         <header class="c-header">
             <img class="c-header__logo" src="./images/spotify-logo.png" alt="Logo Spotify">
-            <!-- <label class="c-header__input">
-                <span class="c-header__label">Filter</span>
-                <select v-model="filterValue" @change="emitFilter" class="c-filter" name="filter" id="filter" placeholder>
-                    <option value="" selected>All</option>
-                    <option v-for="(option, i) in optionsList" :key="i" :value="option">{{option}}</option>
-                </select>
-            </label> -->
+            <div class="c-header__filters">
+                <label class="c-header__input">
+                    <span class="c-header__label">Filter Genres</span>
+                    <select v-model="selectedGenre" @change="getCollection" 
+                        class="c-header__filter" name="genreFilter" id="genreFilter" placeholder>
+                        <option value="" selected>All</option>
+                        <option v-for="(option, i) in collectionGenres" 
+                            :key="i" :value="option">{{option}}</option>
+                    </select>
+                </label>
+                <label class="c-header__input">
+                    <span class="c-header__label">Filter Authors</span>
+                    <select v-model="selectedAuthor" @change="getCollection"
+                        class="c-header__filter" name="authorFilter" id="authorFilter" placeholder>
+                        <option value="" selected>All</option>
+                        <option v-for="(option, i) in collectionAuthors" 
+                            :key="i" :value="option">{{option}}</option>
+                    </select>
+                </label>
+                <label class="c-header__input">
+                    <span class="c-header__label">Filter Years</span>
+                    <select v-model="selectedYear" @change="getCollection"
+                        class="c-header__filter" name="yearfilter" id="yearFilter" placeholder>
+                        <option value="" selected>All</option>
+                        <option v-for="(option, i) in collectionYears" 
+                            :key="i" :value="option">{{option}}</option>
+                    </select>
+                </label>
+            </div>
         </header>
         <main>
             <section class="c-collection l-container">
-                <div v-for="(album, i) in collection" class="c-album">
+                <div v-for="(album, i) in filteredCollection" class="c-album">
                     <img :src="album.poster" :alt="album.title" class="c-album__img">
                     <h3 class="c-album__title">{{album.title}}</h3>
                     <p class="c-album__data">{{album.author}}</p>
